@@ -26,7 +26,7 @@ class OnzonespiderSpider(scrapy.Spider):
         yield {
             'name': response.css("div.col-xs-5 h1::text").get(),
             'processor': response.css("ul.attribute-list > li:first-child span::text").get(),
-            'screen size': response.css("ul.attribute-list > li:nth-child(2) span::text").get(),
+            'screen_size': response.css("ul.attribute-list > li:nth-child(2) span::text").get(),
             'RAM': response.css("ul.attribute-list > li:nth-child(4) span::text").get(),
             "HDD" : response.css("ul.attribute-list > li:nth-child(5) span::text").get(),
             'old_price': response.css("div.price-box p.old-price span.price::text").get(),
